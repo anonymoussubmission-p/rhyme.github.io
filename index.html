@@ -124,12 +124,10 @@
           </h1>
           <br>
           <div class="publication-video">
-              <!-- add a link to youtube video using iframe -->
-
-              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/robot_abc.mov" type="video/mp4">
-              </video>
-                <!-- </video>  -->
+            <figure>
+              <img src="./resources/intro_fig.png" alt="Introduction Figure">
+              <figcaption>We introduce RHyME, a hierarchical framework that trains a robot policy to mimic a long-horizon video from a demonstrator that exhibits mismatched task execution. Inference Time (Left): Our robot policy translates a demonstrator video into actions to complete the same long-horizon tasks specified by the input. Train Time (Right): Given unpaired robot-demonstrator datasets, RHyME "imagines" a paired dataset by employing sequence-level similarity metrics which can be used for training the policy.</figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -242,7 +240,7 @@
       <!-- </div>
     </div> -->
 
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Visual Encoder</h2>          
           
@@ -250,7 +248,6 @@
           <br>
           <br>
           <p style="text-align: left;">
-            <!-- The visual encoder aligns human demonstration encodings and robot demonstration encodings visually, temporally, and at a task level -->
 
             We visualize the video embeddings via t-SNE and see that the embeddings are clustered together by task and temporally aligned. When the robot and human task embedding begin to diverge from each other, where other algorithms might fail at generlization, RHyME is able to correctly select the human snippet that is semantically equivalent to the robot view and and infer upon that. It selects the correct task albeit the minor divergence occurring. 
             
@@ -277,20 +274,21 @@
             
       </div>
     </div>
-    <br>
+    <br> -->
 
+    <h2 class="title is-2 is-centered has-text-centered">Real World Evaluations</h2> 
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths" >
         <h2 class="title is-3">Light, Pot, Cloth</h2> 
         <div class="video div" style="display: flex; justify-content: space-between;">
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/robot_abd.mov" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-steve">
+          <div class="item item-steve" style="margin: 2%">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/human_abd.mov" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-steve" style="margin: 2%">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/robot_abd.mov" type="video/mp4">
             </video>
           </div>
         </div>
@@ -303,14 +301,14 @@
       <div class="column is-four-fifths" >
         <h2 class="title is-3">Pot, Drawer, Cloth</h2> 
         <div class="video div" style="display: flex; justify-content: space-between;">
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/robot_bcd.mov" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-steve">
+          <div class="item item-steve" style="margin: 2%">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/human_bcd.mov" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-steve" style="margin: 2%">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/robot_bcd.mov" type="video/mp4">
             </video>
           </div>
         </div>
@@ -322,14 +320,14 @@
       <div class="column is-four-fifths" >
         <h2 class="title is-3">Light, Pot, Drawer</h2> 
         <div class="video div" style="display: flex; justify-content: space-between;">
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/robot_abc.mov" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-steve">
+          <div class="item item-steve" style="margin: 2%">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/human_abc.mov" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-steve" style="margin: 2%">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/robot_abc.mov" type="video/mp4">
             </video>
           </div>
         </div>
@@ -338,6 +336,15 @@
       </div>
     </div>
     
+    <h2 class="title is-2 is-centered has-text-centered">Simulation Evaluations</h2> 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths" >
+        <figure>
+          <img src="./resources/fig_success_new.png" alt="Introduction Figure">
+          <figcaption>We present results on three datasets (left). As the demonstrator's actions visually and physically deviate further from those of the robot, policies trained with our framework RHyME consistently outperforms XSkill measured by task recall and imprecision rates.</figcaption>
+        </figure>
+  </div>
+    </div>
 
     <!-- <br> -->
   </div>
